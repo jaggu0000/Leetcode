@@ -48,3 +48,15 @@ var firstUniqChar = function (s) {
     return -1;
 };
 
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var firstUniqChar = function(s) {
+    let map = {};
+    let arr = s.split('');
+    for (let i of arr) {
+        map[i] = (map[i] || 0) + 1;
+    }
+    return arr.findIndex((i) => map[i] === 1)
+};
