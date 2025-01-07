@@ -51,3 +51,5 @@ var stringMatching = function (words) {
     }
     return answer;
 };
+
+var stringMatching = (words, str = words.join()) => words.filter(word => str.split(word).length > 2);
