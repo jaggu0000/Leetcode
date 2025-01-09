@@ -40,3 +40,7 @@ var prefixCount = function (words, pref) {
     }
     return answer;
 };
+
+
+
+var prefixCount = (words, pref) => words.filter((word) => word.slice(0, pref.length) === pref).length
