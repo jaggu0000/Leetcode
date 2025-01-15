@@ -53,3 +53,18 @@ var merge = function(nums1, m, nums2, n) {
     }
     nums1.sort((a, b) => a - b);
 };
+
+
+
+var merge = function(nums1, m, nums2, n) {
+    let arr = [...nums1];
+    let i = 0, j = 0;
+    for(let k = 0; k < m + n; k ++) {
+        if(arr[i] < nums2[j] && i < m || n === 0 || nums2[j] === undefined) {
+            nums1[k] = arr[i++];
+        }
+        else {
+            nums1[k] = nums2[j++];
+        }
+    }
+};
