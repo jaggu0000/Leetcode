@@ -42,5 +42,5 @@
 
 
 
-# Write your MySQL query statement below
+-- # Write your MySQL query statement below
 select emp.name as Employee from Employee emp inner join Employee mgr on emp.managerId=mgr.id where emp.managerId is not null and emp.salary > mgr.salary;
